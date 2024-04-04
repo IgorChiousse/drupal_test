@@ -1,0 +1,22 @@
+uuid: 8511df01-a096-4c9b-b9c0-404afc08b9cc
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - leboncoin
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: leboncoin_help
+theme: leboncoin
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aide
+  label_display: '0'
+  provider: help
+visibility: {  }

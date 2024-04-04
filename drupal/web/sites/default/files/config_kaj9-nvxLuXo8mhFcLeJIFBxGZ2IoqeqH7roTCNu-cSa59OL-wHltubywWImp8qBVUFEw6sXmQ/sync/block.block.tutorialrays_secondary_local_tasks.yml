@@ -1,0 +1,22 @@
+uuid: c7092895-74de-4f48-99df-ee903cc4482e
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - tutorialrays
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: tutorialrays_secondary_local_tasks
+theme: tutorialrays
+region: header
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets secondaires'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

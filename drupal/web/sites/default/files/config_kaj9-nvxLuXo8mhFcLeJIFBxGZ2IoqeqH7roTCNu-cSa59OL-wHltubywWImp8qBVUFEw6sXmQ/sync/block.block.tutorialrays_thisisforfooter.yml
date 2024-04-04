@@ -1,0 +1,25 @@
+uuid: 29dd43f6-fb5e-4841-b540-8d27f089c089
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7e8f6993-088b-4ab0-8aba-ed26105a1155'
+  module:
+    - block_content
+  theme:
+    - tutorialrays
+id: tutorialrays_thisisforfooter
+theme: tutorialrays
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:7e8f6993-088b-4ab0-8aba-ed26105a1155'
+settings:
+  id: 'block_content:7e8f6993-088b-4ab0-8aba-ed26105a1155'
+  label: 'This is for footer'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

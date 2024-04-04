@@ -1,0 +1,15 @@
+name: Tutorial Rays
+description: This is demo theme dor learning
+type: theme
+base theme: false
+core_version_requirement: ^9 || ^10
+
+version: 1.0
+libraries:
+  - tutorialrays/global-styling 
+regions:
+  header: header
+  menu: menu
+  content: content
+  sidebar: sidebar
+  footer: footer

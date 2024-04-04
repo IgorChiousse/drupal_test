@@ -1,0 +1,60 @@
+uuid: 5cd2a68c-f7e2-4f71-b1de-f9c43d9a6925
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.annonce.field_categorie
+    - field.field.node.annonce.field_description
+    - field.field.node.annonce.field_images
+    - field.field.node.annonce.field_prix
+    - node.type.annonce
+  module:
+    - image
+    - user
+id: node.annonce.default
+targetEntityType: node
+bundle: annonce
+mode: default
+content:
+  field_categorie:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_prix:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

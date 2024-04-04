@@ -1,0 +1,22 @@
+uuid: 93a4f567-81b2-4b09-8492-73794aedb9d6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorialrays
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: tutorialrays_messages
+theme: tutorialrays
+region: header
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Messages de statut'
+  label_display: '0'
+  provider: system
+visibility: {  }

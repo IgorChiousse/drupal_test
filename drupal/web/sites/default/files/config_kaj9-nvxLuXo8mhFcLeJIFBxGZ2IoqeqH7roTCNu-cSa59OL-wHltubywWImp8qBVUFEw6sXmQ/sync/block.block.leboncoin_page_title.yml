@@ -1,0 +1,20 @@
+uuid: f382a138-ae8c-4153-a209-ec4dbce1a5e1
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - leboncoin
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: leboncoin_page_title
+theme: leboncoin
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  label_display: '0'
+  provider: core
+visibility: {  }

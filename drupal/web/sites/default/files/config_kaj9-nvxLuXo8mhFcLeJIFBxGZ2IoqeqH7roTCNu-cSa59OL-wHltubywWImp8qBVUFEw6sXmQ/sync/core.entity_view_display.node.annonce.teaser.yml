@@ -1,0 +1,44 @@
+uuid: 8a73f40a-fb83-43c5-9b6d-5889ef320466
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.annonce.field_categorie
+    - field.field.node.annonce.field_description
+    - field.field.node.annonce.field_images
+    - field.field.node.annonce.field_prix
+    - node.type.annonce
+  module:
+    - image
+    - user
+id: node.annonce.teaser
+targetEntityType: node
+bundle: annonce
+mode: teaser
+content:
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_prix:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_categorie: true
+  field_description: true
+  langcode: true
+  links: true

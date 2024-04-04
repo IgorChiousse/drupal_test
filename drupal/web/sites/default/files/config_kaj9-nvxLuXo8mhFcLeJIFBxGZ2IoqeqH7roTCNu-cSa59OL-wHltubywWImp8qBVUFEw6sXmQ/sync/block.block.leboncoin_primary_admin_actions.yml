@@ -1,0 +1,20 @@
+uuid: 587b893b-3873-4d03-9164-e7f96ac18540
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - leboncoin
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: leboncoin_primary_admin_actions
+theme: leboncoin
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: "Actions d'administration principales"
+  label_display: '0'
+  provider: core
+visibility: {  }

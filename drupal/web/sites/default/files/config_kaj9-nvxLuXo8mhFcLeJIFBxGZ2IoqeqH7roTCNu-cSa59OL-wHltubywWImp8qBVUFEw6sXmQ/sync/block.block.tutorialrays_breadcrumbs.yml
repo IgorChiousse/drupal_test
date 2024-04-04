@@ -1,0 +1,22 @@
+uuid: c502d8f3-0d78-4df5-b7ad-098af82ea07c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorialrays
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: tutorialrays_breadcrumbs
+theme: tutorialrays
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: "Fils d'ariane"
+  label_display: '0'
+  provider: system
+visibility: {  }

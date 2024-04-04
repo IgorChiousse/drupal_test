@@ -1,0 +1,20 @@
+uuid: e2f33025-776f-4e57-b88b-ab3151043895
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - tutorialrays
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: tutorialrays_page_title
+theme: tutorialrays
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  label_display: '0'
+  provider: core
+visibility: {  }

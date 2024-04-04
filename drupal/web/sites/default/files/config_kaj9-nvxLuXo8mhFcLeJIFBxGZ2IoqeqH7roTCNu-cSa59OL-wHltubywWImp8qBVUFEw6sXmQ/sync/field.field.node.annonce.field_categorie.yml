@@ -1,0 +1,29 @@
+uuid: 008c42fa-0501-4a83-a212-a308e80f9ad6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorie
+    - node.type.annonce
+    - taxonomy.vocabulary.categorie
+id: node.annonce.field_categorie
+field_name: field_categorie
+entity_type: node
+bundle: annonce
+label: Catégorie
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categorie: categorie
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

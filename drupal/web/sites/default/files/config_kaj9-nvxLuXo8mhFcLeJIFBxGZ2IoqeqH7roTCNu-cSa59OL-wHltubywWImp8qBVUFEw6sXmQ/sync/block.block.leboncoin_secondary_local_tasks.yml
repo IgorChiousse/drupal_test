@@ -1,0 +1,22 @@
+uuid: ebdcde92-9917-42bd-8230-d234724d121a
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - leboncoin
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: leboncoin_secondary_local_tasks
+theme: leboncoin
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets secondaires'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

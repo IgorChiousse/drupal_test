@@ -1,0 +1,22 @@
+uuid: b30c50ec-eb53-4623-8d54-960b37bd4f77
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tutorialrays
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: tutorialrays_help
+theme: tutorialrays
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aide
+  label_display: '0'
+  provider: help
+visibility: {  }

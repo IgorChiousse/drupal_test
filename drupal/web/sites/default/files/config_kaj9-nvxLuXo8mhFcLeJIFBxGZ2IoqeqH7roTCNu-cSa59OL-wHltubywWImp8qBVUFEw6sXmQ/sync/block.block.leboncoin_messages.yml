@@ -1,0 +1,22 @@
+uuid: 7c985fb1-96f2-49d9-a18f-4b519e83c52d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - leboncoin
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: leboncoin_messages
+theme: leboncoin
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Messages de statut'
+  label_display: '0'
+  provider: system
+visibility: {  }

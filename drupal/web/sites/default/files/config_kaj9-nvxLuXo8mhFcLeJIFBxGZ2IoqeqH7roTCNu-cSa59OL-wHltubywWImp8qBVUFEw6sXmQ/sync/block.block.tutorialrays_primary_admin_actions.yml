@@ -1,0 +1,20 @@
+uuid: 9402db32-1479-407a-bc9a-4a4ff981194a
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - tutorialrays
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: tutorialrays_primary_admin_actions
+theme: tutorialrays
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: "Actions d'administration principales"
+  label_display: '0'
+  provider: core
+visibility: {  }

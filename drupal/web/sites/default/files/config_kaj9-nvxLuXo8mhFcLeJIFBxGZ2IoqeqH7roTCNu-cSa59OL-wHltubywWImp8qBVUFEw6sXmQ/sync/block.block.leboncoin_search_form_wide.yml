@@ -1,0 +1,23 @@
+uuid: 39748808-5550-4ce5-bd4a-8e94d4c5a8b2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - leboncoin
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: leboncoin_search_form_wide
+theme: leboncoin
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulaire de recherche (large)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

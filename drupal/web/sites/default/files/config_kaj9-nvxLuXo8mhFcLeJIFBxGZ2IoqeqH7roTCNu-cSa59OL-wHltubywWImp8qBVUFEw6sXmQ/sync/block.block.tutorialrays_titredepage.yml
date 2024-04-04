@@ -1,0 +1,18 @@
+uuid: 6c6924d5-db13-44d7-81ec-07634caf7d84
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - tutorialrays
+id: tutorialrays_titredepage
+theme: tutorialrays
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  label_display: '0'
+  provider: core
+visibility: {  }

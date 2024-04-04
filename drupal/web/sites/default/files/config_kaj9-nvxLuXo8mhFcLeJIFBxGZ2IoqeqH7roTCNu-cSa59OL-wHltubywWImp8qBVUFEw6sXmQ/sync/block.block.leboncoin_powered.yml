@@ -1,0 +1,22 @@
+uuid: d36f7cc8-5419-4808-acd1-e1ab0e2116e3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - leboncoin
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: leboncoin_powered
+theme: leboncoin
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

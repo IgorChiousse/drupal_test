@@ -1,0 +1,23 @@
+uuid: 06b8ab94-b7c6-4aba-ab82-445cdae80b88
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prix
+    - node.type.annonce
+id: node.annonce.field_prix
+field_name: field_prix
+entity_type: node
+bundle: annonce
+label: Prix
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: €
+field_type: integer
