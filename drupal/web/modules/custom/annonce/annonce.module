@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function annonce_theme($existing, $type, $theme, $path) {
+    return [
+      'interrested' => [
+        'variables' => [
+          'title' => "",
+        ],
+      ],
+    ];
+  }
+
+

@@ -1,0 +1,5 @@
+name: Annonce
+type: module
+description : "Gère les annonce du site"
+package: Le bon coin
+core_version_requirement: ^10

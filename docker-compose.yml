@@ -1,0 +1,83 @@
+version: '3.9'
+
+services:
+  reverse-proxy:
+    image: traefik:latest
+    command: --api.insecure=true --providers.docker
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      
+  php:
+    build:
+      context: ./.docker/php
+      dockerfile: Dockerfile
+      args:
+        PROJECT: ${PROJECT}
+        WEB_ROOT: ${WEB_ROOT}
+        PHP_VERSION: "${PHP_VERSION}"
+        DRUPAL_VERSION: "${DRUPAL_VERSION}"
+        CLONE_REPO: ${CLONE_REPO}
+    depends_on:
+      - mariadb
+    environment:
+      - "PHP_VERSION=${PHP_VERSION}"
+      - "PROJECT=${PROJECT}"
+      - "WEB_ROOT=${WEB_ROOT}"
+    volumes:
+      - ./${PROJECT}:/home/app/${PROJECT}
+    ports:
+      - "81:80" # for http tunnel without traefik
+    labels:
+      - "traefik.http.routers.structure_api.rule=Host(`${PROJECT}.localhost`)"
+
+
+  mariadb:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      - MARIADB_ROOT_PASSWORD=${MARIADB_PASSWORD}
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
+      - MARIADB_USER=${MARIADB_USER}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+    volumes:
+      - mariadb-data:/var/lib/mysql    
+
+#  postgres:
+#    build:
+#      context: ./.docker/postgres
+#      dockerfile: Dockerfile
+#      args:
+#        POSTGRES_VERSION: "${POSTGRES_VERSION}"
+#        POSTGRES_PORT: ${POSTGRES_PORT}
+#    environment:
+#      - POSTGRES_USER=${POSTGRES_USER}
+#      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+#    volumes:
+#      - postgres-data:/var/lib/postgresql/data
+
+
+  adminer:
+    image: adminer
+    labels:
+      - "traefik.http.routers.adminer.rule=Host(`adminer.localhost`)" 
+
+
+#  elasticsearch:
+#    image: elasticsearch:${ELASTICSEARCH_VERSION}
+#    environment:
+#      - discovery.type=single-node
+#      - xpack.security.enabled=false    
+
+
+  mailhog:
+    image: mailhog/mailhog
+    labels:
+      - "traefik.http.routers.mailhog.rule=Host(`mailhog.localhost`)" 
+      - "traefik.http.services.mailhog.loadbalancer.server.port=8025"
+
+
+volumes:
+  postgres-data: {}
+  mariadb-data: {}

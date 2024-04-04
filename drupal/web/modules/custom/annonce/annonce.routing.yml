@@ -1,0 +1,6 @@
+interrested:
+  path: '/interrested/{nid}'
+  defaults:
+    _controller: '\Drupal\annonce\Controller\AnnonceController::interrested'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,3 @@
+services:
+  annonce.service:
+    class: Drupal\annonce\Services\AnnonceService

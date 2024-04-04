@@ -1,0 +1,5 @@
+# Path
+export PATH="$PATH:/home/app/$PROJECT/vendor/bin"
+
+# Alias
+alias ll="ls -all"

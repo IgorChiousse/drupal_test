@@ -1,0 +1,4 @@
+drupal/vendor
+drupal/web/core
+drupal/web/modules/contrib
+drupal/.cache
