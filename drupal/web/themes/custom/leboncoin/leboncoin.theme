@@ -8,5 +8,5 @@
  * Adds body classes if certain regions have content.
  */
 function leboncoin_preprocess_html(&$variables) {
-  $variables["mavariable"] = "Bonjour";
+  $variables["mavariable"] = "Bienvenu";
 }
